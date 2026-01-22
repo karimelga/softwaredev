@@ -7,8 +7,10 @@ import java.util.Random;
 import java.util.Scanner;
 void main() {
     //sonnet
+    int rightAnswer = 0;
     int correct = 0;
-    int count = 0;
+    int incorrectCount = 0;
+    int attempt = 0;
     Scanner scanner = new Scanner(System.in);
     ArrayList<Character> sonnetList = new ArrayList<>();
     String paragraph = "Two households, both alike in dignity,\n" +
@@ -25,8 +27,8 @@ void main() {
             "Is now the two hours’ traffic of our stage;\n" +
             "The which if you with patient ears attend,\n" +
             "What here shall miss, our toil shall strive to mend.\n";
-    while (count < 3 && correct == 0) {
-        if (count > 0){
+    while (incorrectCount < 3 && correct < 3) {
+        if (attempt > 0){
             sonnetList.clear();
         }
         Random rand = new Random();
@@ -73,19 +75,20 @@ void main() {
         String guess = scanner.nextLine();
         System.out.println("Your guess was: " + guess + " and the word was " + word);
         if (guess.equals(word)){
-            correct = 1;
+            correct += 1;
         }
         else{
-            count += 1;
+            incorrectCount += 1;
         }
+        attempt += 1;
     }
 
 
-    if( correct == 1){
-        System.out.println("Great Job.");
+    if( correct == 3){
+        System.out.println("Great Job. You got the right answer three times.");
     }
     else{
-        System.out.println("Your three guesses were wrong.");
+        System.out.println("Three of your guesses were wrong.");
     }
 }
 
