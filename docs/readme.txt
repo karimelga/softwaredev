@@ -5,7 +5,11 @@ The location in Gradescope to submit the homework will be published next week. N
 In IntelliJ, create a new project named Homework 1 to house this work. The program should start by running a class called Main. Your project should have a folder for src, a folder for docs, and a folder for tests.
 
 You may have other questions... bring them to class next Tuesday.
-Given the sonnet below, write a program that writes out the sonnet and stops at a random word, printing a series of underscores instead, and not printing the rest of the sonnet. The program should prompt the user for the next word. Once the user responds, the program should indicate correct or error, and restart the sonnet, stopping at a different word. Program continues until the user gets three words correct or three words incorrect.
+
+
+
+
+Given the sonnet below, the program writes out the sonnet and stops at a random word, printing a series of underscores instead, and not printing the rest of the sonnet. The program prompts the user for the next word. Once the user responds, the program indicates correct or error, and restart the sonnet, stopping at a different word. Program continues until the user gets one correct or three words incorrect.
 
 Two households, both alike in dignity,
 In fair Verona, where we lay our scene,
