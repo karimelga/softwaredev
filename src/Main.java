@@ -1,5 +1,7 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -24,6 +26,9 @@ void main() {
             "The which if you with patient ears attend,\n" +
             "What here shall miss, our toil shall strive to mend.\n";
     while (count < 3 && correct == 0) {
+        if (count > 0){
+            sonnetList.clear();
+        }
         Random rand = new Random();
         int i = rand.nextInt(paragraph.length());
         while (paragraph.charAt(i) == '\n' || paragraph.charAt(i) == ' ' || paragraph.charAt(i) == '.' || paragraph.charAt(i) == ',' || paragraph.charAt(i) == ';') {
@@ -47,7 +52,7 @@ void main() {
         sizeOfWord = (highIndex + 1) - lowIndex;
         for (int j = lowIndex; j < (highIndex + 1); j++) {
             sonnetList.add(paragraph.charAt(j));
-             //add word to arraylist
+            //add word to arraylist
         }
         String word = "";
         for (char character : sonnetList) {
@@ -83,4 +88,7 @@ void main() {
         System.out.println("Your three guesses were wrong.");
     }
 }
+
+
+
 
